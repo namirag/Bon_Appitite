@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.My_cartFragment"
+    android:padding="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/my_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cart_title_txt"
+        android:textStyle="bold"
+        android:textColor="@color/dark_skin_one"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/dark_skin"
+        app:layout_constraintWidth_percent=".6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_cart"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_rec"
+        android:layout_width="388dp"
+        android:layout_height="376dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_one" />
+
+    <View
+        android:id="@+id/view_two"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/dark_skin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_rec"
+        app:layout_constraintVertical_bias="0.222"
+        app:layout_constraintWidth_percent=".6" />
+
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="81dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:text="Total"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_two"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="33dp"
+        android:src="@drawable/ic_baseline_currency_rupee_24"
+        android:tint="@color/dark_skin"
+        app:layout_constraintBottom_toTopOf="@+id/button_order"
+        app:layout_constraintEnd_toStartOf="@id/txt_total_num"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/txt_total"
+        app:layout_constraintTop_toTopOf="@id/view_two"
+        app:layout_constraintVertical_bias="0.636"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/txt_total_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="0/-"
+        android:textColor="@color/dark_skin"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/button_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_two"
+        app:layout_constraintVertical_bias="0.641"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_order"
+        android:layout_width="176dp"
+        android:layout_height="49dp"
+        android:background="@drawable/btn_bg_design"
+        android:drawablePadding="14dp"
+        android:text="@string/make_order"
+        android:onClick="payment"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_two"
+        app:layout_constraintVertical_bias="0.563"
+        app:layout_constraintWidth_percent=".8"
+        tools:ignore="TextContrastCheck" />
+
+    <ScrollView
+        android:layout_width="408dp"
+        android:layout_height="34dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="474dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
